@@ -1,5 +1,6 @@
 import React from "react";
 import CityData from "./components/CityData";
+import Home from "./pages/Home";
 
 import "./App.css";
 
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <div className="App">
+      <Home />
       {places.map((place) => (
         <CityData place={place} />
       ))}
