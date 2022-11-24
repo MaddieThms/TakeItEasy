@@ -3,11 +3,11 @@ import React from "react";
 import { CheckIcon } from "@heroicons/react/solid";
 
 const steps = [
-  { name: "Step 1", href: "#session", status: "complete" },
-  { name: "Step 2", href: "#session", status: "complete" },
-  { name: "Step 3", href: "#session", status: "current" },
-  { name: "Step 4", href: "#session", status: "upcoming" },
-  { name: "Step 5", href: "#session", status: "upcoming" },
+  { name: "Step 1", href: "#session1", status: "complete" },
+  { name: "Step 2", href: "#session2", status: "complete" },
+  { name: "Step 3", href: "#session3", status: "current" },
+  { name: "Step 4", href: "#session4", status: "upcoming" },
+  { name: "Step 5", href: "#session5", status: "upcoming" },
 ];
 
 function classNames(...classes) {
@@ -35,7 +35,7 @@ export default function Levels() {
                   <div className="h-0.5 w-full bg-indigo-600" />
                 </div>
                 <a
-                  href="#section"
+                  href="#section1"
                   className="relative w-8 h-8 flex items-center justify-center bg-indigo-600 rounded-full hover:bg-indigo-900"
                 >
                   <CheckIcon
@@ -54,7 +54,7 @@ export default function Levels() {
                   <div className="h-0.5 w-full bg-gray-200" />
                 </div>
                 <a
-                  href="#section"
+                  href="#section2"
                   className="relative w-8 h-8 flex items-center justify-center bg-white border-2 border-indigo-600 rounded-full"
                   aria-current="step"
                 >
@@ -74,7 +74,7 @@ export default function Levels() {
                   <div className="h-0.5 w-full bg-gray-200" />
                 </div>
                 <a
-                  href="#section"
+                  href="#section3"
                   className="group relative w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full hover:border-gray-400"
                 >
                   <span
