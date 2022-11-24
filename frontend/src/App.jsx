@@ -34,9 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      {heroes.map((hero) => (
-        <Home hero={hero} />
-      ))}
+      <Home heroes={heroes} />
+
       {marco.map((place) => (
         <CityData place={place} />
       ))}
