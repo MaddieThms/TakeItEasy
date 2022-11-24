@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CityData from "./components/CityData";
 import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
   const [marco, setMarco] = useState([]);
@@ -14,6 +15,8 @@ function App() {
   }, []);
   return (
     <div className="App">
+      <Home />
+
       {marco.map((place) => (
         <CityData place={place} />
       ))}
