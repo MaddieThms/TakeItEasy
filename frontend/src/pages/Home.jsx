@@ -20,12 +20,20 @@ export default function Home() {
       <p className="text-3xl text-text italic text-center mb-10">
         Choisissez votre personnage
       </p>
-      <main className="flex w-fit flex-1 justify-evenly items-center">
-        <button className="w-3/12" type="button" onClick={handleShowModal}>
+      <main className="flex flex-col md:flex-row w-9/12 flex-1 justify-evenly items-center">
+        <button
+          className="w-7/12 lg:w-5/12 mb-10"
+          type="button"
+          onClick={handleShowModal}
+        >
           <MarcoModal showModal={showModal} />
           <img src="./src/assets/marco.png" alt="Marco Polo" />
         </button>
-        <button className="w-3/12" type="button" onClick={handleShowModal2}>
+        <button
+          className="w-7/12 lg:w-5/12"
+          type="button"
+          onClick={handleShowModal2}
+        >
           <EstherModal showModal2={showModal2} />
           <img src="./src/assets/esther.png" alt="Esther" />
         </button>
