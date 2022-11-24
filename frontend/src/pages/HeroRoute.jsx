@@ -24,7 +24,7 @@ function HeroRoute({ heroName }) {
       {hero.length && (
         <>
           <h1>Sur les pas de Marco</h1>
-          <h3>Level {level+1}</h3>
+          <h3>Level {level + 1}</h3>
           <Levels level={level} />
           <Puzzle img={hero[level].image} />
           <CityData city={hero[level]} />

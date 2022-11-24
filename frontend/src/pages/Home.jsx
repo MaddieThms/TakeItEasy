@@ -11,8 +11,8 @@ export default function Home() {
       <main className="flex w-fit flex-1 justify-evenly items-center">
         <img className="w-3/12" src="./src/assets/marco.png" alt="Marco Polo" />
         <img className="w-3/12" src="./src/assets/esther.png" alt="Esther" />
-        <NavLink to="marco" >Marco Polo</NavLink>
-        <NavLink to="marco" >Esther Standhope</NavLink>
+        <NavLink to="marco">Marco Polo</NavLink>
+        <NavLink to="marco">Esther Standhope</NavLink>
       </main>
     </div>
   );
