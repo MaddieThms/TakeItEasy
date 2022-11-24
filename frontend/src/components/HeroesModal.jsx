@@ -1,17 +1,14 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-function HeroesModal({ hero, showModal, setChosenHero }) {
+function HeroesModal({ showModal }) {
   return (
-    <div>
+    <div className="h-screen">
       {showModal ? (
         <>
-          <img src={hero.heroImage} alt={hero.heroName} />
-          <h2>{hero.heroName}</h2>
-          <p>{hero.heroDescription}</p>
-          <button type="button" onClick={setChosenHero}>
-            Choisir cet explorateur
-          </button>
+          <img src="./src/assets/marco.png" alt="Marco Polo" />
+          <h2>Marco Polo</h2>
+          <p>hi</p>
         </>
       ) : null}
     </div>

@@ -24,7 +24,7 @@ export default function Home() {
       <p className="">
         “Sur les pas de...” est un jeu interactif qui vous invite à un voyage
         dans le rôle de deux explorateurs emblématiques. Dans la peau de Marco
-        Polo et Lady Esther Stanhope, vous pouvez découvrir les villes qu’ils
+        Polo et Lady Esther Stanhope, vous pouvez découvrir les villes qu'ils
         ont parcourues.
       </p>
     </div>
