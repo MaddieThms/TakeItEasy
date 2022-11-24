@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CityData from "./components/CityData";
+import Home from "./pages/Home";
 
 import "./App.css";
 
