@@ -2,8 +2,7 @@ import React from "react";
 import CityData from "./components/CityData";
 
 import "./App.css";
-import HeroesModal from "@components/HeroesModal";
-import Home from "@pages/Home";
+import Home from "./pages/Home";
 
 function App() {
   const places = [
@@ -31,8 +30,8 @@ function App() {
     },
   ];
 
-  //Création des profils héros
-  const Heroes = [
+  // Hero profiles
+  const heroes = [
     {
       id: 1,
       heroImage: "to replace",
@@ -54,8 +53,7 @@ function App() {
       {places.map((place) => (
         <CityData place={place} />
       ))}
-      <HeroesModal hero={hero} />
-
+      <Home heroes={heroes} />
       <p>coucou</p>
     </div>
   );
