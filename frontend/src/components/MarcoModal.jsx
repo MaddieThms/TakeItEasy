@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function MarcoModal({ showModal }) {
   return (
@@ -18,7 +19,7 @@ function MarcoModal({ showModal }) {
             vingtaine d'années, il entreprend son voyage de retour à l'occasion
             d'une mission diplomatique.
           </p>
-          <button type="button">Choisir cet explorateur</button>
+          <NavLink to="marco">Choisir cet explorateur</NavLink>
         </>
       ) : null}
     </div>
