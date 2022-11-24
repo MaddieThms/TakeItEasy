@@ -1,25 +1,19 @@
-import React, { useEffect, useState } from "react";
-import CityData from "./components/CityData";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
+import HeroRoute from "./pages/HeroRoute";
+import EndGame from "./pages/EndGame";
 
 function App() {
-  const [marco, setMarco] = useState([]);
-  useEffect(() => {
-    fetch(`http://localhost:5001/marco`)
-      .then((response) => response.json())
-      .then((data) => {
-        setMarco(data);
-        console.warn(marco);
-      });
-  }, []);
   return (
     <div className="App">
-      <Home />
-
-      {marco.map((place) => (
-        <CityData place={place} />
-      ))}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="marco" element={<HeroRoute />} />
+        <Route path="esther" element={<HeroRoute />} />
+        <Route path="endgame" element={<EndGame />} />
+      </Routes>
     </div>
   );
 }
