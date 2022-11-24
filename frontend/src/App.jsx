@@ -50,7 +50,9 @@ function App() {
 
   return (
     <div className="App">
-      <Home />
+      {heroes.map((hero) => (
+        <Home hero={hero} />
+      ))}
       {places.map((place) => (
         <CityData place={place} />
       ))}
