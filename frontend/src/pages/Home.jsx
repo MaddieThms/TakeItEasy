@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import MarcoModal from "../components/MarcoModal";
 import EstherModal from "../components/EstherModal";
 
@@ -31,6 +32,8 @@ export default function Home() {
           <EstherModal showModal2={showModal2} />
           <img className="w-3/12" src="./src/assets/esther.png" alt="Esther" />
         </button>
+        <NavLink to="marco">Marco Polo</NavLink>
+        <NavLink to="marco">Esther Standhope</NavLink>
       </main>
     </div>
   );
