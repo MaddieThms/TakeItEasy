@@ -11,4 +11,4 @@ function CityData({ place }) {
   );
 }
 
-export default Level;
+export default CityData;
