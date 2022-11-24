@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 
-function Puzzle({ place }) {
+function Puzzle({ img }) {
   const [text, setText] = useState("Unpuzzle the pieces!!");
 
   const set = () => {
@@ -14,7 +14,7 @@ function Puzzle({ place }) {
     <>
       <h2 className="tag">{text}</h2>
       <JigsawPuzzle
-        imageSrc={place.img}
+        imageSrc={img}
         rows={3}
         columns={3}
         onSolved={set}

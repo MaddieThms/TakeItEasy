@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-function CityData({ place }) {
+function CityData({ city }) {
   return (
     <div>
-      <h3>{place.quote}</h3>
-      <h5>{place.text_history}</h5>
-      <a href={place.ext_URL}>Website</a>
+      <h3>{city.quote}</h3>
+      <h5>{city.text_history}</h5>
+      <a href={city.ext_URL}>Website</a>
     </div>
   );
 }
