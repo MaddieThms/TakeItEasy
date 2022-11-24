@@ -54,7 +54,6 @@ function App() {
       {places.map((place) => (
         <CityData place={place} />
       ))}
-      <Home heroes={heroes} />
       <p>coucou</p>
     </div>
   );
