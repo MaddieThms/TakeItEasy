@@ -12,7 +12,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="marco" element={<HeroRoute heroName="marco" />} />
         <Route path="esther" element={<HeroRoute heroName="esther" />} />
-        <Route path="endgame" element={<EndGame />} />
+        <Route path="marco/endgame" element={<EndGame />} />
+        <Route path="esther/endgame" element={<EndGame />} />
       </Routes>
     </div>
   );
