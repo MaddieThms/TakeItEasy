@@ -4,9 +4,9 @@ import React from "react";
 function CityData({ place }) {
   return (
     <div>
-      <h3>{place.quote}</h3>
-      <h5>{place.text_history}</h5>
-      <a href={place.ext_URL}>En savoir plus</a>
+      <h3>{place.citation}</h3>
+      <h5>{place.histoire}</h5>
+      <a href={place.site}>Website</a>
     </div>
   );
 }
