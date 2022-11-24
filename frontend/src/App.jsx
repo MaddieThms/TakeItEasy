@@ -3,6 +3,7 @@ import CityData from "./components/CityData";
 import Home from "./pages/Home";
 
 import "./App.css";
+import Levels from "./components/Levels";
 
 function App() {
   const places = [
@@ -32,7 +33,9 @@ function App() {
 
   return (
     <div className="App">
+      <Levels />
       <Home />
+
       {places.map((place) => (
         <CityData place={place} />
       ))}
