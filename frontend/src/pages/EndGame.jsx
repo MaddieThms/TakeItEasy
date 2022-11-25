@@ -13,12 +13,12 @@ function EndGame({ heroName }) {
   }, []);
 
   return (
-    <div className="bg-backgroundMarco h-auto pb-4 flex flex-col justify-center">
+    <div className="bg-backgroundMarco h-screen pb-20 flex flex-col justify-center ">
       <NavBar hero={heroName === "Marco" ? "Marco" : "Esther"} />
       {hero.length && (
         <>
-          <div className="h-[35vh] md:h-[25vh]">
-            <h1 className="text-5xl text-title text-center pt-12 mb-8">
+          <div className="flex flex-col	justify-center h-auto w-screen">
+            <h1 className="text-4xl text-title text-center mt-10 mb-8 mx-4">
               {heroName}, tu es {heroName === "Marco" ? "arrivé" : "arrivée"} à
               la fin de ton voyage !
             </h1>
@@ -26,7 +26,7 @@ function EndGame({ heroName }) {
               Redécouvre chaque étape ton aventure :
             </h2>
           </div>
-          <div className="endgame-pictures grid grid-cols-2 m-4 gap-2  h-auto">
+          <div className="endgame-pictures grid grid-cols-2 m-4 gap-2">
             {hero.map((place) => (
               <img
                 key={place.id}
