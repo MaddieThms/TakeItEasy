@@ -27,12 +27,20 @@ export default function Home() {
           onClick={handleShowModal}
         >
           <MarcoModal showModal={showModal} />
-          <img src="./src/assets/marco.png" alt="Marco Polo" />
+          <img
+            className="img-marco"
+            src="./src/assets/marco.png"
+            alt="Marco Polo"
+          />
           <h2 className="text-2xl text-text">Marco</h2>
         </button>
         <button className="w-7/12" type="button" onClick={handleShowModal2}>
           <EstherModal showModal2={showModal2} />
-          <img src="./src/assets/esther.png" alt="Esther" />
+          <img
+            className="img-esther"
+            src="./src/assets/esther.png"
+            alt="Esther"
+          />
           <h2 className="text-2xl text-text">Esther</h2>
         </button>
       </div>
