@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Puzzle from "../components/Puzzle";
 import CityData from "../components/CityData";
 import NavBar from "../components/NavBar";
+import Levels from "../components/Levels";
 // eslint-disable-next-line react/prop-types
 function HeroRoute({ heroName }) {
   const [hero, setHero] = useState([]);
@@ -35,6 +36,7 @@ function HeroRoute({ heroName }) {
           <h1 className="text-4xl text-title text-center pt-10 mb-8">
             Sur les pas de {heroName}
           </h1>
+          <Levels level={level} />
           <h2 className="text-center">Etape {level + 1}</h2>
           <div>
             <Puzzle img={hero[level].image} setShowButton={setShowButton} />

@@ -6,8 +6,8 @@ function CityData({ city, heroName }) {
     <div
       className={
         heroName === "Marco"
-          ? "bg-backgroundMarco h-auto"
-          : "bg-backgroundEsther h-auto"
+          ? "bg-backgroundMarco h-auto w-screen"
+          : "bg-backgroundEsther h-auto w-screen"
       }
     >
       <p className="italic text-xl py-4">{city.quote}</p>
