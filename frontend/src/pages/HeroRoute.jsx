@@ -45,7 +45,7 @@ function HeroRoute({ heroName }) {
             </h1>
             <Levels level={level} />
             <h2 className="text-center">Etape {level + 1}</h2>
-            <div>
+            <div className="md:min-w-[70%] self-center">
               <Puzzle
                 city={hero[level]}
                 setShowButton={setShowButton}
@@ -54,7 +54,7 @@ function HeroRoute({ heroName }) {
               />
             </div>
             {showButton && (
-              <>
+              <div>
                 <CityData city={hero[level]} heroName={heroName} />
                 {level < 5 ? (
                   <div className="flex justify-center pb-4">
@@ -77,7 +77,7 @@ function HeroRoute({ heroName }) {
                     </NavLink>
                   </div>
                 )}
-              </>
+              </div>
             )}
           </div>
         )}

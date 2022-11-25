@@ -48,7 +48,7 @@ function Puzzle({ city, setShowButton, level, difficulty }) {
             />
           )}
 
-          <h2 className="text-title text-3xl text-center mt-12">{text}</h2>
+          <h2 className="text-title text-3xl text-center mt-12 mb-8">{text}</h2>
         </>
       )}
     </div>

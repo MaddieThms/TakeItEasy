@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import MarcoModal from "../components/MarcoModal";
 import EstherModal from "../components/EstherModal";
+import Logo from "../assets/logo.png";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -14,6 +16,9 @@ export default function Home() {
   };
   return (
     <div className="bg-home h-max-screen">
+      <NavLink to="/" className="absolute ml-4 mt-4">
+        <img src={Logo} alt="Logo" className="h-12 w-12" />
+      </NavLink>
       <h1 className="text-6xl text-title text-center pt-20 mb-10">
         Sur les pas de...
       </h1>

@@ -10,7 +10,7 @@ function CityData({ city, heroName }) {
           : "bg-backgroundEsther h-auto w-auto"
       }
     >
-      <p className="italic text-xl py-4">{city.quote}</p>
+      <p className="italic text-xl text-center py-4">{city.quote}</p>
       <p className="text-xl py-2 text-center">{city.text_history}</p>
       <a
         className="text-title py-4 hover:underline-offset-4 flex justify-center"

@@ -52,8 +52,6 @@ p {
   );
 }
 
-
-
 .navlink {
   font-family: var(--text-font);
 }
@@ -63,11 +61,12 @@ p {
 }
 
 @keyframes headrotaion {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(-20deg);
   }
 
-  50%{
+  50% {
     transform: rotate(20deg);
   }
 }
@@ -77,11 +76,12 @@ p {
 }
 
 @keyframes headrotaion {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(-20deg);
   }
 
-  50%{
+  50% {
     transform: rotate(20deg);
   }
 }
