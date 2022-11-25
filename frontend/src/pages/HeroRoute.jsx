@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Levels from "../components/Levels";
 import Puzzle from "../components/Puzzle";
 import CityData from "../components/CityData";
+import NavBar from "../components/NavBar";
 // eslint-disable-next-line react/prop-types
 function HeroRoute({ heroName }) {
   const [hero, setHero] = useState([]);
@@ -24,6 +25,7 @@ function HeroRoute({ heroName }) {
 
   return (
     <div>
+      <NavBar hero={heroName === "Marco" ? "Marco" : "Esther"} />
       {hero.length && (
         <>
           <h1>Sur les pas de {heroName}</h1>
