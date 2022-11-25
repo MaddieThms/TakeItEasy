@@ -41,7 +41,7 @@ function HeroRoute({ heroName }) {
         {hero.length && (
           <div className="flex flex-col	justify-center mx-8">
             <h1 className="text-4xl text-title text-center pt-10 mb-8">
-              Sur les pas de {heroName} et difficulté {difficulty.difficulty}
+              Sur les pas de {heroName}
             </h1>
             <Levels level={level} />
             <h2 className="text-center">Etape {level + 1}</h2>
