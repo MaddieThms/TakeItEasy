@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Levels from "../components/Levels";
 import Puzzle from "../components/Puzzle";
 import CityData from "../components/CityData";
 import NavBar from "../components/NavBar";
@@ -24,32 +23,28 @@ function HeroRoute({ heroName }) {
   };
 
   return (
-    <div>
+    <div
+      className={
+        (heroName === "Marco" && "bg-backgroundMarco h-screen") ||
+        (heroName === "Esther" && "bg-backgroundEsther h-screen")
+      }
+    >
       <NavBar hero={heroName === "Marco" ? "Marco" : "Esther"} />
       {hero.length && (
         <>
-          <h1>Sur les pas de {heroName}</h1>
-          <h3>Level {level + 1}</h3>
-          <Levels level={level} />
-          <Puzzle
-            img={hero[level].image}
-            setShowButton={setShowButton}
-            level={level}
-          />
+          <h1 className="text-title">Sur les pas de {heroName}</h1>
+          <h3>Etape {level + 1}</h3>
+          <Puzzle img={hero[level].image} setShowButton={setShowButton} />
           {showButton && (
             <>
-              <CityData city={hero[level]} />
+              <CityData city={hero[level]} heroName={heroName} />
               {level < 5 ? (
-                <button
-                  className="text-title"
-                  onClick={nextLevel}
-                  type="button"
-                >
-                  Next Level
+                <button onClick={nextLevel} type="button">
+                  Prochaine destination
                 </button>
               ) : (
                 <NavLink to="endgame" heroName={heroName}>
-                  You've won
+                  Vous avez fini l'aventure
                 </NavLink>
               )}
             </>
