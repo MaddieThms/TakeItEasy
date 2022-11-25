@@ -1,10 +1,21 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 
-function Puzzle({ city, setShowButton }) {
-  const [text, setText] = useState("Découvrez les mystéres cryptés !");
+function Puzzle({ city, setShowButton, level, difficulty }) {
+  const [text, setText] = useState("Découvre la ville cachée !");
+  const [columnRows, setColumnRows] = useState(0);
+
+  useEffect(() => {
+    if (difficulty === "facile") {
+      setColumnRows(2);
+    } else if (difficulty === "moyen") {
+      setColumnRows(3);
+    } else if (difficulty === "difficile") {
+      setColumnRows(4);
+    }
+  }, []);
 
   const set = () => {
     setText(`Bienvenue à ${city.city}`);
@@ -13,16 +24,29 @@ function Puzzle({ city, setShowButton }) {
 
   return (
     <div>
-      <JigsawPuzzle
-        imageSrc={city.image}
-        // rows={level + 2}
-        // columns={level + 2}
-        rows={2} // Test Levels
-        columns={2} // Test Levels
-        onSolved={set}
-        className="jigsaw-puzzle"
-      />
-      <h2 className="text-title text-3xl text-center mt-12">{text}</h2>
+      {columnRows > 0 && (
+        <>
+          {level < 3 ? (
+            <JigsawPuzzle
+              imageSrc={city.image}
+              rows={columnRows} // Test Levels
+              columns={columnRows} // Test Levels
+              onSolved={set}
+              className="jigsaw-puzzle"
+            />
+          ) : (
+            <JigsawPuzzle
+              imageSrc={city.image}
+              rows={columnRows + 1} // Test Levels
+              columns={columnRows + 1} // Test Levels
+              onSolved={set}
+              className="jigsaw-puzzle"
+            />
+          )}
+
+          <h2 className="text-title text-3xl text-center mt-12">{text}</h2>
+        </>
+      )}
     </div>
   );
 }

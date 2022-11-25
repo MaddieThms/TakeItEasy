@@ -13,12 +13,12 @@ function EndGame({ heroName }) {
   }, []);
 
   return (
-    <div className="bg-backgroundMarco h-screen pb-4 flex flex-col justify-center ">
+    <div className="bg-backgroundMarco h-screen pb-20 flex flex-col justify-center ">
       <NavBar hero={heroName === "Marco" ? "Marco" : "Esther"} />
       {hero.length && (
         <>
           <div className="flex flex-col	justify-center h-auto w-screen">
-            <h1 className="text-4xl text-title text-center mt-10 mb-8">
+            <h1 className="text-4xl text-title text-center mt-10 mb-8 mx-4">
               {heroName}, tu es {heroName === "Marco" ? "arrivé" : "arrivée"} à
               la fin de ton voyage !
             </h1>
