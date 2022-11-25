@@ -17,6 +17,7 @@ app.get("/", welcome);
 const takeItEasy = require("./TakeItEasy.jsx");
 
 app.get("/marco", takeItEasy.GetMarco);
+app.get("/esther", takeItEasy.GetEsther);
 app.listen(port, (err) => {
   if (err) {
     console.error("Something bad happened");

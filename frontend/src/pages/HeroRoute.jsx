@@ -23,10 +23,10 @@ function HeroRoute({ heroName }) {
   };
 
   return (
-    <div>
+    <div className="bg-backgroundMarco h-screen">
       {hero.length && (
         <>
-          <h1>Sur les pas de Marco</h1>
+          <h1 className="text-title">Sur les pas de Marco</h1>
           <h3>Level {level + 1}</h3>
           <Levels level={level} />
           <Puzzle img={hero[level].image} setShowButton={setShowButton} />
@@ -34,7 +34,11 @@ function HeroRoute({ heroName }) {
             <>
               <CityData city={hero[level]} />
               {level < 5 ? (
-                <button onClick={nextLevel} type="button">
+                <button
+                  className="text-title"
+                  onClick={nextLevel}
+                  type="button"
+                >
                   Next Level
                 </button>
               ) : (

@@ -3,7 +3,7 @@ import React from "react";
 
 function CityData({ city }) {
   return (
-    <div>
+    <div className="bg-backgroundMarco">
       <h3>{city.quote}</h3>
       <h5>{city.text_history}</h5>
       <a href={city.ext_URL}>Website</a>

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function MarcoModal({ showModal }) {
   return (
-    <div>
+    <div className="bg-backgroundMarco">
       {showModal ? (
         <>
           <img src="./src/assets/marco.png" alt="Marco Polo" />

@@ -1,21 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,400;0,700;1,400&family=Permanent+Marker&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --title-font: "Permanent Marker", "sans-serif";
   --text-font: "KoHo", "sans-serif";
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
 }
-
 h1 {
   font-family: var(--title-font);
+}
+
+
+.tag {
+  text-align: center;
+  color: green;
+  margin: 2rem;
+}
+
+/* for the jigsaw puzzle container */
+.jigsaw-puzzle {
+  width: 90%;
+  height: 90%;
+  border: 2px solid black;
+  margin: auto;
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.25);
 }
