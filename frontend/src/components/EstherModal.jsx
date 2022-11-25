@@ -25,7 +25,7 @@ function EstherModal({ showModal2 }) {
             <div className="flex w-screen justify-center">
               <NavLink
                 className="bg-title w-56 text-center h-12 py-2 font-semiboldpy-2 px-4 rounded"
-                to="marco"
+                to="esther"
               >
                 <span className="text-white text-center text-xl">
                   Choisir Esther

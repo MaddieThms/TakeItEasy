@@ -14,7 +14,8 @@
   scroll-behavior: smooth;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--title-font);
 }
 
@@ -31,7 +32,7 @@ p {
   z-index: 20;
   height: 100vh;
   width: 100vw;
-  background: #FFE8CF;
+  background: #ffe8cf;
 }
 
 .svg-modal {
@@ -43,6 +44,10 @@ p {
 }
 
 .bg-home {
-  background: rgb(238,174,202);
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }
