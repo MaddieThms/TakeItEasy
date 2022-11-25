@@ -22,13 +22,25 @@ function EstherModal({ showModal2 }) {
               Liban. La Revue des deux Mondes de 1845 la décrit comme « reine de
               Tadmor, sorcière, prophétesse, patriarche, chef arabe ».
             </p>
-            <div className="flex w-screen justify-center">
+            <div className="flex flex-col w-screen items-center justify-center gap-6">
               <NavLink
-                className="bg-title w-56 text-center h-12 py-2 font-semiboldpy-2 px-4 rounded"
-                to="esther"
+                className=" bg-title w-56 text-center h-16 py-4 font-semibold px-4 rounded hover:scale-105"
+                to="esther/facile"
               >
-                <span className="text-white text-center text-xl">
-                  Choisir Esther
+                <span className="navlink text-white text-center text-xl">Facile</span>
+              </NavLink>
+              <NavLink
+                className=" bg-title w-56 text-center h-16 py-4 font-semibold px-4 rounded hover:scale-105"
+                to="esther/moyen"
+              >
+                <span className="navlink text-white text-center text-xl">Moyen</span>
+              </NavLink>
+              <NavLink
+                className=" bg-title w-56 text-center h-16 py-4 font-semibold px-4 rounded hover:scale-105"
+                to="esther/difficile"
+              >
+                <span className="navlink text-white text-center text-xl text-font">
+                  Difficile
                 </span>
               </NavLink>
             </div>
