@@ -24,4 +24,12 @@ database
   .catch((err) => {
     console.error(err);
   });
+database
+  .query("select * from Esther")
+  .then((result) => {
+    console.error(result);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
 module.exports = database;
