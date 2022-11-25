@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function MarcoModal({ showModal }) {
   return (
-    <div>
+    <div className="bg-backgroundMarco">
       {showModal ? (
         <div className="justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none">
           <div className="fullscreen pb-6 bg-backgroundHome svg-modal lg:items-center lg:justify-center lg:h-screen lg:overflow-hidden">

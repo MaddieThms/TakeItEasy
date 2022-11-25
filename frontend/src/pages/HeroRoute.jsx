@@ -40,7 +40,11 @@ function HeroRoute({ heroName }) {
             <>
               <CityData city={hero[level]} />
               {level < 5 ? (
-                <button onClick={nextLevel} type="button">
+                <button
+                  className="text-title"
+                  onClick={nextLevel}
+                  type="button"
+                >
                   Next Level
                 </button>
               ) : (
