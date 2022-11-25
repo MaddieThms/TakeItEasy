@@ -37,6 +37,14 @@ export default function Home() {
           <EstherModal showModal2={showModal2} />
           <img src="./src/assets/esther.png" alt="Esther" />
         </button>
+
+        <h1>Concept</h1>
+        <h3>
+          “Sur les pas de...” est un jeu interactif qui vous invite à un voyage
+          dans le rôle de deux explorateurs emblématiques. Dans la peau de Marco
+          Polo et Lady Esther Stanhope, vous pouvez découvrir les villes qu’ils
+          ont parcourues.
+        </h3>
       </main>
     </div>
   );
