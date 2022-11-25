@@ -3,6 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      animation: ["hover", "focus"],
       colors: {
         backgroundHome: "#FFE8CF",
         backgroundEsther: "#FEE4A6",

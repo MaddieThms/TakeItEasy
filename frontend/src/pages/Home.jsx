@@ -13,7 +13,7 @@ export default function Home() {
     setShowModal2(!showModal2);
   };
   return (
-    <div className="bg-backgroundHome h-max-screen">
+    <div className="bg-home h-max-screen">
       <h1 className="text-6xl text-title text-center pt-20 mb-10">
         Sur les pas de...
       </h1>
