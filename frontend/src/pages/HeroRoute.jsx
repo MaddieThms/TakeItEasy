@@ -26,10 +26,14 @@ function HeroRoute({ heroName }) {
     <div>
       {hero.length && (
         <>
-          <h1>Sur les pas de Marco</h1>
+          <h1>Sur les pas de {heroName}</h1>
           <h3>Level {level + 1}</h3>
           <Levels level={level} />
-          <Puzzle img={hero[level].image} setShowButton={setShowButton} />
+          <Puzzle
+            img={hero[level].image}
+            setShowButton={setShowButton}
+            level={level}
+          />
           {showButton && (
             <>
               <CityData city={hero[level]} />
@@ -38,7 +42,9 @@ function HeroRoute({ heroName }) {
                   Next Level
                 </button>
               ) : (
-                <NavLink to="endgame">You've won</NavLink>
+                <NavLink to="endgame" heroName={heroName}>
+                  You've won
+                </NavLink>
               )}
             </>
           )}
