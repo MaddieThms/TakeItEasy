@@ -1,28 +1,40 @@
+/* eslint-disable react/prop-types */
 /* This example requires Tailwind CSS v2.0+ */
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 import { CheckIcon } from "@heroicons/react/solid";
 
 const steps = [
-  { name: "Step 1", href: "#session1", status: "complete" },
-  { name: "Step 2", href: "#session2", status: "complete" },
-  { name: "Step 3", href: "#session3", status: "current" },
-  { name: "Step 4", href: "#session4", status: "upcoming" },
-  { name: "Step 5", href: "#session5", status: "upcoming" },
+  { name: "1", status: "current" },
+  { name: "2", status: "upcoming" },
+  { name: "3", status: "upcoming" },
+  { name: "4", status: "upcoming" },
+  { name: "5", status: "upcoming" },
+  { name: "6", status: "upcoming" },
 ];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Levels() {
+export default function Levels({ level }) {
+  const [, setRefresh] = useState(false);
+  useEffect(() => {
+    if (level > 0) {
+      steps[level].status = "current";
+      steps[level - 1].status = "complete";
+      setRefresh((prev) => !prev);
+    }
+  }, [level]);
+
   return (
     <nav aria-label="Progress">
-      <ol className="flex items-center">
+      <ol className="flex items-center py-4">
         {steps.map((step, stepIdx) => (
           <li
             key={step.name}
             className={classNames(
-              stepIdx !== steps.length - 1 ? "pr-8 sm:pr-20" : "",
+              stepIdx !== steps.length ? "pr-6 md:pr-20" : "",
               "relative"
             )}
           >
@@ -32,7 +44,7 @@ export default function Levels() {
                   className="absolute inset-0 flex items-center"
                   aria-hidden="true"
                 >
-                  <div className="h-0.5 w-full bg-indigo-600" />
+                  <div className="w-full bg-indigo-600" />
                 </div>
                 <a
                   href="#section1"
@@ -51,7 +63,7 @@ export default function Levels() {
                   className="absolute inset-0 flex items-center"
                   aria-hidden="true"
                 >
-                  <div className="h-0.5 w-full bg-gray-200" />
+                  <div className="w-full bg-gray-200" />
                 </div>
                 <a
                   href="#section2"
@@ -71,10 +83,10 @@ export default function Levels() {
                   className="absolute inset-0 flex items-center"
                   aria-hidden="true"
                 >
-                  <div className="h-0.5 w-full bg-gray-200" />
+                  <div className="w-full bg-gray-200" />
                 </div>
                 <a
-                  href="#section3"
+                  href="#section"
                   className="group relative w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full hover:border-gray-400"
                 >
                   <span
