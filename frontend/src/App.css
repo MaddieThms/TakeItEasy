@@ -16,6 +16,6 @@
   scroll-behavior: smooth;
 }
 
-h1 {
+h1, h2{
   font-family: var(--title-font);
 }
