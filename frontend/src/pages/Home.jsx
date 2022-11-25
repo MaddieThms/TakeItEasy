@@ -39,10 +39,10 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center mt-12">
         <h2 className="text-4xl text-title">Concept</h2>
         <p className="text-text text-2xl text-center px-12 py-6 lg:px-56 lg:pb-12">
-          “Sur les pas de...” est un jeu interactif qui vous invite à un voyage
-          dans le rôle de deux explorateurs emblématiques. Dans la peau de Marco
-          Polo et Lady Esther Stanhope, vous pouvez découvrir les villes qu’ils
-          ont parcourues.
+          “Pas à pas” est un jeu interactif qui vous invite à un voyage dans le
+          rôle de deux explorateurs emblématiques. Dans la peau de Marco Polo et
+          Lady Esther Stanhope, vous pouvez découvrir les villes qu’ils ont
+          parcourues.
         </p>
       </div>
     </div>
