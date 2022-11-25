@@ -27,13 +27,17 @@ function EstherModal({ showModal2 }) {
                 className=" bg-title w-56 text-center h-16 py-4 font-semibold px-4 rounded hover:scale-105"
                 to="esther/facile"
               >
-                <span className="navlink text-white text-center text-xl">Facile</span>
+                <span className="navlink text-white text-center text-xl">
+                  Facile
+                </span>
               </NavLink>
               <NavLink
                 className=" bg-title w-56 text-center h-16 py-4 font-semibold px-4 rounded hover:scale-105"
                 to="esther/moyen"
               >
-                <span className="navlink text-white text-center text-xl">Moyen</span>
+                <span className="navlink text-white text-center text-xl">
+                  Moyen
+                </span>
               </NavLink>
               <NavLink
                 className=" bg-title w-56 text-center h-16 py-4 font-semibold px-4 rounded hover:scale-105"
