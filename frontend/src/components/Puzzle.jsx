@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 
-function Puzzle({ img, setShowButton, level }) {
+function Puzzle({ img, setShowButton }) {
   const [text, setText] = useState("Unpuzzle the pieces!!");
 
   const set = () => {
