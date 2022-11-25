@@ -3,19 +3,18 @@ import React, { useState } from "react";
 import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 
-function Puzzle({ img, setShowButton }) {
+function Puzzle({ city, setShowButton }) {
   const [text, setText] = useState("Découvrez les mystéres cryptés !");
 
   const set = () => {
-    setText("Félicitation !");
+    setText(`Bienvenue à ${city.city}`);
     setShowButton(true);
   };
 
   return (
     <div>
-      <h2 className="text-sm text-[#011371]">{text}</h2>
       <JigsawPuzzle
-        imageSrc={img}
+        imageSrc={city.image}
         // rows={level + 2}
         // columns={level + 2}
         rows={2} // Test Levels
@@ -23,6 +22,7 @@ function Puzzle({ img, setShowButton }) {
         onSolved={set}
         className="jigsaw-puzzle"
       />
+      <h2 className="text-title text-3xl text-center mt-12">{text}</h2>
     </div>
   );
 }
