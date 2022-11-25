@@ -17,6 +17,10 @@ function Puzzle({ city, setShowButton, level, difficulty }) {
     }
   }, []);
 
+  useEffect(() => {
+    setText("Découvre la ville cachée !");
+  }, [level]);
+
   const set = () => {
     setText(`Bienvenue à ${city.city}`);
     setShowButton(true);
