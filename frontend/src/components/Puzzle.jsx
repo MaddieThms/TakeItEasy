@@ -16,8 +16,10 @@ function Puzzle({ img, setShowButton }) {
       <h2 className="tag">{text}</h2>
       <JigsawPuzzle
         imageSrc={img}
-        rows={2}
-        columns={2}
+        // rows={level + 2}
+        // columns={level + 2}
+        rows={2} // Test Levels
+        columns={2} // Test Levels
         onSolved={set}
         className="jigsaw-puzzle"
       />
