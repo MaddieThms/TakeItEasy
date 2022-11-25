@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Levels from "../components/Levels";
 import Puzzle from "../components/Puzzle";
 import CityData from "../components/CityData";
+import NavBar from "../components/NavBar";
 // eslint-disable-next-line react/prop-types
 function HeroRoute({ heroName }) {
   const [hero, setHero] = useState([]);
@@ -24,12 +25,17 @@ function HeroRoute({ heroName }) {
 
   return (
     <div>
+      <NavBar hero={heroName === "Marco" ? "Marco" : "Esther"} />
       {hero.length && (
         <>
-          <h1>Sur les pas de Marco</h1>
+          <h1>Sur les pas de {heroName}</h1>
           <h3>Level {level + 1}</h3>
           <Levels level={level} />
-          <Puzzle img={hero[level].image} setShowButton={setShowButton} />
+          <Puzzle
+            img={hero[level].image}
+            setShowButton={setShowButton}
+            level={level}
+          />
           {showButton && (
             <>
               <CityData city={hero[level]} />
@@ -38,7 +44,9 @@ function HeroRoute({ heroName }) {
                   Next Level
                 </button>
               ) : (
-                <NavLink to="endgame">You've won</NavLink>
+                <NavLink to="endgame" heroName={heroName}>
+                  You've won
+                </NavLink>
               )}
             </>
           )}
