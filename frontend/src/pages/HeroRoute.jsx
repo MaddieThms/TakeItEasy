@@ -6,7 +6,7 @@ import NavBar from "../components/NavBar";
 // eslint-disable-next-line react/prop-types
 function HeroRoute({ heroName }) {
   const [hero, setHero] = useState([]);
-  const [level, setLevel] = useState(5);
+  const [level, setLevel] = useState(0);
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -43,7 +43,11 @@ function HeroRoute({ heroName }) {
             </h1>
             <h2 className="text-center">Etape {level + 1}</h2>
             <div>
-              <Puzzle city={hero[level]} setShowButton={setShowButton} />
+              <Puzzle
+                city={hero[level]}
+                setShowButton={setShowButton}
+                level={level}
+              />
             </div>
             {showButton && (
               <>

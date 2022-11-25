@@ -28,6 +28,7 @@ function MarcoModal({ showModal }) {
               <NavLink
                 className="bg-title w-56 text-center h-16 py-4 font-semibold px-4 rounded"
                 to="marco"
+                difficulty={2}
               >
                 <span className="text-white text-center text-xl">
                   Choisir Marco
