@@ -55,3 +55,33 @@ p {
 .navlink {
   font-family: var(--text-font);
 }
+
+.img-marco:hover {
+  animation: 3s infinite headrotaion;
+}
+
+@keyframes headrotaion {
+  0%, 100% {
+    transform: rotate(-20deg);
+  }
+
+  50%{
+    transform: rotate(20deg);
+  }
+}
+
+
+
+.img-esther:hover {
+  animation: 3s infinite headrotaion;
+}
+
+@keyframes headrotaion {
+  0%, 100% {
+    transform: rotate(-20deg);
+  }
+
+  50%{
+    transform: rotate(20deg);
+  }
+}
