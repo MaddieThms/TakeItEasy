@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Puzzle from "../components/Puzzle";
 import CityData from "../components/CityData";
+import NavBar from "../components/NavBar";
 // eslint-disable-next-line react/prop-types
 function HeroRoute({ heroName }) {
   const [hero, setHero] = useState([]);
@@ -24,13 +25,14 @@ function HeroRoute({ heroName }) {
   return (
     <div
       className={
-        (heroName === "marco" && "bg-backgroundMarco h-screen") ||
-        (heroName === "esther" && "bg-backgroundEsther h-screen")
+        (heroName === "Marco" && "bg-backgroundMarco h-screen") ||
+        (heroName === "Esther" && "bg-backgroundEsther h-screen")
       }
     >
+      <NavBar hero={heroName === "Marco" ? "Marco" : "Esther"} />
       {hero.length && (
         <div className="flex flex-col	justify-center mx-8">
-          <h1 className="text-4xl text-title text-center pt-20 mb-10">
+          <h1 className="text-4xl text-title text-center pt-10 mb-8">
             Sur les pas de {heroName}
           </h1>
           <h2 className="text-center">Etape {level + 1}</h2>
@@ -39,17 +41,21 @@ function HeroRoute({ heroName }) {
           </div>
           {showButton && (
             <>
-              <CityData className="text-left" city={hero[level]} />
+              <CityData city={hero[level]} heroName={heroName} />
               {level < 5 ? (
-                <button
-                  className="w-7/12 lg:w-5/12"
-                  onClick={nextLevel}
-                  type="button"
-                >
-                  Prochaine destination
-                </button>
+                <div className="flex justify-center">
+                  <button
+                    className="bg-title w-56 h-12 py-2 my-4 font-semiboldpy-2 rounded text-white text-center text-xl"
+                    onClick={nextLevel}
+                    type="button"
+                  >
+                    Prochaine destination
+                  </button>
+                </div>
               ) : (
-                <NavLink to="endgame">Vous avez fini l'aventure</NavLink>
+                <NavLink to="endgame" heroName={heroName}>
+                  Vous avez fini l'aventure
+                </NavLink>
               )}
             </>
           )}

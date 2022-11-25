@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="marco" element={<HeroRoute heroName="marco" />} />
-        <Route path="esther" element={<HeroRoute heroName="esther" />} />
-        <Route path="marco/endgame" element={<EndGame />} />
-        <Route path="esther/endgame" element={<EndGame />} />
+        <Route path="marco" element={<HeroRoute heroName="Marco" />} />
+        <Route path="esther" element={<HeroRoute heroName="Esther" />} />
+        <Route path="marco/endgame" element={<EndGame heroName="Marco" />} />
+        <Route path="esther/endgame" element={<EndGame heroName="Esther" />} />
       </Routes>
     </div>
   );
