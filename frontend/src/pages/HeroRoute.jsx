@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Levels from "../components/Levels";
 import Puzzle from "../components/Puzzle";
 import CityData from "../components/CityData";
 // eslint-disable-next-line react/prop-types
 function HeroRoute({ heroName }) {
   const [hero, setHero] = useState([]);
-  const [level, setLevel] = useState(5);
+  const [level, setLevel] = useState(0);
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -23,27 +22,27 @@ function HeroRoute({ heroName }) {
   };
 
   return (
-    <div>
+    <div
+      className={
+        (heroName === "marco" && "bg-backgroundMarco h-screen") ||
+        (heroName === "esther" && "bg-backgroundEsther h-screen")
+      }
+    >
       {hero.length && (
         <>
-          <h1>Sur les pas de {heroName}</h1>
-          <h3>Level {level + 1}</h3>
-          <Levels level={level} />
-          <Puzzle
-            img={hero[level].image}
-            setShowButton={setShowButton}
-            level={level}
-          />
+          <h1 className="text-title">Sur les pas de {heroName}</h1>
+          <h3>Etape {level + 1}</h3>
+          <Puzzle img={hero[level].image} setShowButton={setShowButton} />
           {showButton && (
             <>
               <CityData city={hero[level]} />
               {level < 5 ? (
                 <button onClick={nextLevel} type="button">
-                  Next Level
+                  Prochaine destination
                 </button>
               ) : (
                 <NavLink to="endgame" heroName={heroName}>
-                  You've won
+                  Vous avez fini l'aventure
                 </NavLink>
               )}
             </>

@@ -10,7 +10,7 @@ function EstherModal({ showModal2 }) {
           <img src="./src/assets/esther.png" alt="Esther Stanhole" />
           <h2>Esther Stanhole</h2>
           <p> Ca donne pas grand chose</p>
-          <NavLink to="marco">Esther Standhope</NavLink>
+          <NavLink to="esther">Esther Standhope</NavLink>
         </>
       ) : null}
     </div>
