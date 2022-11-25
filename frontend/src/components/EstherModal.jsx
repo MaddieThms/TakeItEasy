@@ -14,7 +14,7 @@ function EstherModal({ showModal2 }) {
               alt="Esther Stanhole"
             />
             <h2 className="text-title text-3xl">Esther Stanhole</h2>
-            <p className="text-text p-6 text-xl">
+            <p className="text-text p-6 text-xl lg:px-56 lg:pb-10 lg:text-2xl">
               Lady Esther (ou Hester) Stanhope, née en 1776, est une aristocrate
               britannique devenue aventurière au Proche-Orient1. Elle fut
               proclamée « reine de Palmyre » par des tribus de bédouins, avant
@@ -22,14 +22,16 @@ function EstherModal({ showModal2 }) {
               Liban. La Revue des deux Mondes de 1845 la décrit comme « reine de
               Tadmor, sorcière, prophétesse, patriarche, chef arabe ».
             </p>
-            <NavLink
-              className="bg-title w-56 text-center h-12 py-2 font-semiboldpy-2 px-4 rounded ml-24"
-              to="esther"
-            >
-              <span className="text-white text-center text-xl">
-                Choisir Esther
-              </span>
-            </NavLink>
+            <div className="flex w-screen justify-center">
+              <NavLink
+                className="bg-title w-56 text-center h-12 py-2 font-semiboldpy-2 px-4 rounded"
+                to="marco"
+              >
+                <span className="text-white text-center text-xl">
+                  Choisir Esther
+                </span>
+              </NavLink>
+            </div>
           </div>
         </div>
       ) : null}

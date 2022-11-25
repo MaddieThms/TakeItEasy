@@ -13,16 +13,16 @@ export default function Home() {
     setShowModal2(!showModal2);
   };
   return (
-    <div className="bg-backgroundHome h-max-screen">
+    <div className="bg-home h-max-screen">
       <h1 className="text-6xl text-title text-center pt-20 mb-10">
         Sur les pas de...
       </h1>
       <p className="text-2xl text-text italic text-center mb-10">
         Choisissez votre personnage
       </p>
-      <div className="flex flex-col md:flex-row w-screen flex-1 justify-center lg:justify-center items-center">
+      <div className="flex flex-col md:flex-row lg:w-7/12 flex-1 justify-center items-center lg:mx-auto">
         <button
-          className="w-7/12 mb-10"
+          className="w-7/12 mb-10 lg:mr-10"
           type="button"
           onClick={handleShowModal}
         >
@@ -38,7 +38,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col justify-center items-center mt-12">
         <h2 className="text-4xl text-title">Concept</h2>
-        <p className="text-text text-xl text-center px-12 py-6">
+        <p className="text-text text-2xl text-center px-12 py-6 lg:px-56 lg:pb-12">
           “Sur les pas de...” est un jeu interactif qui vous invite à un voyage
           dans le rôle de deux explorateurs emblématiques. Dans la peau de Marco
           Polo et Lady Esther Stanhope, vous pouvez découvrir les villes qu’ils
