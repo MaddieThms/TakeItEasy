@@ -7,7 +7,7 @@ import NavBar from "../components/NavBar";
 // eslint-disable-next-line react/prop-types
 function HeroRoute({ heroName }) {
   const [hero, setHero] = useState([]);
-  const [level, setLevel] = useState(5);
+  const [level, setLevel] = useState(0);
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
