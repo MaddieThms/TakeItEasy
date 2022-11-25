@@ -7,14 +7,14 @@ function MarcoModal({ showModal }) {
     <div className="bg-backgroundMarco">
       {showModal ? (
         <div className="justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none">
-          <div className="fullscreen pb-6 bg-backgroundHome svg-modal lg:items-center lg:justify-center lg:h-screen lg:overflow-hidden">
+          <div className="fullscreen pb-6 bg-backgroundHome svg-modal lg:items-center lg:justify-center">
             <img
-              className="p-10"
+              className="p-10 lg:pt-80"
               src="./src/assets/marco.png"
               alt="Marco Polo"
             />
             <h2 className="text-title text-3xl">Marco Polo</h2>
-            <p className="text-text p-6 text-xl lg:px-56 lg:pb-10 lg:text-2xl mb-8">
+            <p className="text-text p-6 text-xl lg:px-56 lg:pb-6 lg:text-2xl mb-8">
               {" "}
               Marco Polo, né en 1254, à Venise, est un marchand vénitien,
               célèbre pour son voyage en Chine. À l'âge de 17 ans, il part avec
