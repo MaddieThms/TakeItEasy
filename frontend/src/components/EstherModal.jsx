@@ -7,9 +7,9 @@ function EstherModal({ showModal2 }) {
     <div>
       {showModal2 ? (
         <div className="justify-center items-center flex fixed inset-0 z-50 outline-none focus:outline-none">
-          <div className="fullscreen pb-6 bg-backgroundHome svg-modal lg:items-center lg:justify-center lg:h-screen lg:overflow-hidden">
+          <div className="fullscreen pb-6 bg-backgroundHome svg-modal lg:items-center lg:justify-center">
             <img
-              className="p-10"
+              className="p-10 lg:pt-80"
               src="./src/assets/esther.png"
               alt="Esther Stanhole"
             />
