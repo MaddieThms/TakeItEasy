@@ -25,8 +25,8 @@ function HeroRoute({ heroName }) {
   return (
     <div
       className={
-        (heroName === "marco" && "bg-backgroundMarco h-screen") ||
-        (heroName === "esther" && "bg-backgroundEsther h-screen")
+        (heroName === "Marco" && "bg-backgroundMarco h-screen") ||
+        (heroName === "Esther" && "bg-backgroundEsther h-screen")
       }
     >
       <NavBar hero={heroName === "Marco" ? "Marco" : "Esther"} />
@@ -37,7 +37,7 @@ function HeroRoute({ heroName }) {
           <Puzzle img={hero[level].image} setShowButton={setShowButton} />
           {showButton && (
             <>
-              <CityData city={hero[level]} />
+              <CityData city={hero[level]} heroName={heroName} />
               {level < 5 ? (
                 <button onClick={nextLevel} type="button">
                   Prochaine destination
