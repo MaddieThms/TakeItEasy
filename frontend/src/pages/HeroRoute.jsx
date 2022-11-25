@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import Levels from "../components/Levels";
 import Puzzle from "../components/Puzzle";
 import CityData from "../components/CityData";
-import "./HeroRoute.css";
 // eslint-disable-next-line react/prop-types
 function HeroRoute({ heroName }) {
   const [hero, setHero] = useState([]);
@@ -32,9 +30,8 @@ function HeroRoute({ heroName }) {
     >
       {hero.length && (
         <>
-          <h1>Sur les pas de {heroName}</h1>
+          <h1 className="text-title">Sur les pas de {heroName}</h1>
           <h3>Etape {level + 1}</h3>
-          <Levels level={level} />
           <Puzzle img={hero[level].image} setShowButton={setShowButton} />
           {showButton && (
             <>
