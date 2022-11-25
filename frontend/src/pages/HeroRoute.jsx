@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import Puzzle from "../components/Puzzle";
 import CityData from "../components/CityData";
 import NavBar from "../components/NavBar";
@@ -8,6 +8,7 @@ function HeroRoute({ heroName }) {
   const [hero, setHero] = useState([]);
   const [level, setLevel] = useState(0);
   const [showButton, setShowButton] = useState(false);
+  const difficulty = useParams();
 
   useEffect(() => {
     fetch(`http://localhost:5001/${heroName}`)
@@ -39,7 +40,7 @@ function HeroRoute({ heroName }) {
         {hero.length && (
           <div className="flex flex-col	justify-center mx-8">
             <h1 className="text-4xl text-title text-center pt-10 mb-8">
-              Sur les pas de {heroName}
+              Sur les pas de {heroName} et difficulté {difficulty.difficulty}
             </h1>
             <h2 className="text-center">Etape {level + 1}</h2>
             <div>
@@ -47,6 +48,7 @@ function HeroRoute({ heroName }) {
                 city={hero[level]}
                 setShowButton={setShowButton}
                 level={level}
+                difficulty={difficulty.difficulty}
               />
             </div>
             {showButton && (

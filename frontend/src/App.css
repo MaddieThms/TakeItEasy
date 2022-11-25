@@ -51,3 +51,7 @@ p {
     rgba(148, 187, 233, 1) 100%
   );
 }
+
+.navlink {
+  font-family: var(--text-font);
+}
