@@ -3,10 +3,11 @@ import { NavLink } from "react-router-dom";
 import Levels from "../components/Levels";
 import Puzzle from "../components/Puzzle";
 import CityData from "../components/CityData";
+import "./HeroRoute.css";
 // eslint-disable-next-line react/prop-types
 function HeroRoute({ heroName }) {
   const [hero, setHero] = useState([]);
-  const [level, setLevel] = useState(5);
+  const [level, setLevel] = useState(0);
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -23,11 +24,16 @@ function HeroRoute({ heroName }) {
   };
 
   return (
-    <div>
+    <div
+      className={
+        (heroName === "marco" && "bg-backgroundMarco h-screen") ||
+        (heroName === "esther" && "bg-backgroundEsther h-screen")
+      }
+    >
       {hero.length && (
         <>
-          <h1>Sur les pas de Marco</h1>
-          <h3>Level {level + 1}</h3>
+          <h1>Sur les pas de {heroName}</h1>
+          <h3>Etape {level + 1}</h3>
           <Levels level={level} />
           <Puzzle img={hero[level].image} setShowButton={setShowButton} />
           {showButton && (
@@ -35,10 +41,10 @@ function HeroRoute({ heroName }) {
               <CityData city={hero[level]} />
               {level < 5 ? (
                 <button onClick={nextLevel} type="button">
-                  Next Level
+                  Prochaine destination
                 </button>
               ) : (
-                <NavLink to="endgame">You've won</NavLink>
+                <NavLink to="endgame">Vous avez fini l'aventure</NavLink>
               )}
             </>
           )}
