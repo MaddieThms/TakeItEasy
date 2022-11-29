@@ -1,18 +1,32 @@
-## Concept
+<h1 align="center">Pas à Pas</h1>
 
-This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
-It's pre-configured with a set of tools which'll help students produce industry-quality and easier-to-maintain code, while staying as simple as possible to use.
 
-## Setup & Use
+<h2>Introduction</h2>
+<p>We started to learn web development in Sept 22. This project is our first hackathon project using React, Express, SQL and Tailwind.<br/>
 
-### Project Initialization
+We chose to make a interactive website to discover the route of known explorers through puzzles.
+<br/>
+We made our own database.<br/>
+</p>
+<br/>
+<br/>
+<h2>About the team</h2>
+<p>The team is composed :</p>
+<p>(You can click to link to our github'profiles )</p>
+<ul>
+<li><a href='https://github.com/DDOroteya'>Doroteya</a></li>
+<li><a href='https://github.com/jvrlpzd'>Javier</a></li>
+<li><a href='https://github.com/Dindonix'>Matthieu</a></li>
+<li><a href='https://github.com/MaddieThms'>Madeline</a></li>
+</ul>
 
-- In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
-- Clone this repo, enter it
-- Run command `npm run setup`
-- _NB: To launch the backend server, you'll need an environment file with database credentials. You'll find a template one in `backend/.env.sample`_
+<h1 href='#'>Tech Stack</h1>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> 
+  <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" alt="tailwind" width="40" height="40"/> </a> 
+<a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a>  </p>
 
-### Available Commands
+
+<h2>Available commands</h2>
 
 - `setup` : Initialization of frontend and backend, as well as all toolings
 - `migrate` : Run the database migration script
@@ -22,9 +36,8 @@ It's pre-configured with a set of tools which'll help students produce industry-
 - `lint` : Runs validation tools, and refuses unclean code (will be executed on every _commit_)
 - `fix` : Fixes linter errors (run it if `lint` growls on your code !)
 
-## FAQ
 
-### Tools
+<h2>Tools</h2>
 
 - _Concurrently_ : Allows for several commands to run concurrently in the same CLI
 - _Husky_ : Allows to execute specific commands that trigger on _git_ events
@@ -33,3 +46,11 @@ It's pre-configured with a set of tools which'll help students produce industry-
 - _Prettier_ : "Quality of code" tool as well, focuses on the styleguide
 - _ Airbnb Standard_ : One of the most known "standards", even though it's not officially linked to ES/JS
 - _Nodemon_ : Allows to restart the server everytime a .js file is udated
+
+<h2>Objectives</h2>
+<p>This project was an opportunity to learn and practice React. Some mistakes are expected.
+<br/> We do appreciate any feedbacks.</p>
+<br/> Thanks ! </p>
+
+
+
